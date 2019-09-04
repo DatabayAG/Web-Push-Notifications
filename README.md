@@ -27,7 +27,7 @@ After entering the project click on the gear right next to "Project Overview" on
 You should now see some general setting for your project and below a list of all your apps.
 Choose "web" out of the list of your apps (those are prefixed with </>) or create a new app by clicking the "Add app" button.
 After selecting an app you see multiple information on the right.
-Copy the CDN html-code directly under "Firebase SDK snippet". It should look like this:
+Copy the CDN html-code directly under "Firebase SDK snippet". It should look similar to this:
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
