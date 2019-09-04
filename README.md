@@ -55,12 +55,16 @@ If you dont want to use CDN you can also download the js.
 #### Integration
 
 To integrate push notifications in your web-app you have to paste the SDK snippet into the index.html and add a few things.
-First of all you have to register a ServiceWorker.
-To do that you create a firebase-messaging-sw.js in your root directory.
-- In this js you can define all Eventslisteners your push-notifications should react to. later more.
 
-After this you need the firebase-messaging.js.
-You can should it right after the firebase-app.js in your SDK snippet
+First of all you have to register a ServiceWorker.
+
+To do that you have to create a `firebase-messaging-sw.js` in your root directory.
+
+In this js you can define all Eventslisteners your push-notifications should react to.
+
+After this you need the `firebase-messaging.js`.
+
+You should add it right after the `firebase-app.js` in your SDK snippet
 
      <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-messaging.js"></script>
      
