@@ -72,21 +72,22 @@ Now you should be able to create a messaging object below the `initializeApp` in
 
     const messaging = firebase.messaging();
 
-Now you have to connect the ServiceWorker to your firebase project server.
-For that you need your public VAPID key.
-- VAPID is an secure protocol communication between the server and the ServiceWorker.
-- Its published by Google and a proposed standart for [IETF](https://www.rfc-editor.org/info/rfc8292).
+You have to connect the ServiceWorker to your firebase project server.
 
-To get the key go to your firebase project setting and enter the tab "Cloud Messaging".
-Now scroll down to "Web configuration".
-In the right box (below "Web Push certificates") you should see a key called "Key pair".
+Therefor you need your public VAPID key.
+- VAPID is an secure protocol communication between the server and the ServiceWorker.
+- Its published by Google and a proposed standard for [IETF](https://www.rfc-editor.org/info/rfc8292).
+
+To get the key, go to your firebase project setting and enter the tab "Cloud Messaging".
+You have to scroll down to "Web configuration".
+In box on the right (below "Web Push certificates") you should see a key called "Key pair".
 If not create one.
-Then copy the Key and iject it into your SDK snippet right below the creation of the messaging object inseide the function messaging.usePublicVapidKey().
+Then copy the key and inject it into your SDK snippet right below the creation of the messaging object inseide the function `messaging.usePublicVapidKey()`.
 
     messaging.usePublicVapidKey('<your-key>');
 
 For an public web app its necessary that you ask the user for permission to send notifications.
-Therefore you have to add the function messaging.requestPermission() and wrap the connection process.
+Therefore you have to add the function `messaging.requestPermission()` and wrap the connection process.
 
     messaging.requestPermission();
     if(Notification.permission === 'granted'){
@@ -97,8 +98,8 @@ Therefore you have to add the function messaging.requestPermission() and wrap th
 
 #### Sending
 
-To send a message to all registered ServiceWorkers you need to get the token form one of the ServiceWorker.
-For this you have to call the promise-function messaging.getToken() after your Integration.
+To send a message to all registered ServiceWorkers you need to get the token from  one of the ServiceWorker.
+For this you have to call the promise-function `messaging.getToken()` after your integration.
 
     messaging.getToken().then((currentToken) => {});
 
@@ -115,11 +116,11 @@ You can now send notification request to that endpoint.
 To authenticate the request you need one of your firebase server keys.
 You can find those in your firebase project settings in the tab cloud messaging.
 You can use the Legacy Server key but its recommended to add/use a new Server key.
-You can create multiple Server keys for different purposes.
+It is possible to create multiple Server keys for different purposes.
 
 With the endpoint and the Server key you are now able to trigger push notifications on all active ServiceWorkers.
 Therefore you can use any valid communication method.
-In the following example i use CURL on my CLI.
+In the following example I use CURL on my CLI.
 
      curl "<your-endpoint>" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=<your-server-key>"
 
