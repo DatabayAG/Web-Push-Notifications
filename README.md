@@ -7,9 +7,9 @@ Works for Chrome, EDGE and Firefox. All Examples are for Chrome.
 
 ### Requirements
 
-The web-app server communication run over https
+The web-app server communication expects a https connection
 
-All web-certificates are valid
+All web-certificates must be valid
  * otherwise the browser has to be started explicitly unsecured like
     
   
