@@ -7,13 +7,14 @@ Works for Chrome, EDGE and Firefox. All Examples are for Chrome.
 
 ### Requirements
 
-1 The web-app server communication expects a https connection
-2 All web-certificates must be valid
-  * otherwise the browser has to be started explicitly unsecured like
+
+1. The web-app server communication expects a https connection
+2. All web-certificates must be valid
+   * otherwise the browser has to be started explicitly unsecured like
     
     `google-chrome --user-data-dir=/tmp/foo --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=<your-host>`
 
-Browser-notification arent global disabled
+3. Ensure browser-notification arent global disabled
 
 ### Implementation
 
