@@ -124,12 +124,12 @@ In the following example I use CURL on my CLI.
 
      curl "<your-endpoint>" --request POST --header "TTL: 60" --header "Content-Length: 0" --header "Authorization: key=<your-server-key>"
 
-The may be tiny differences for between different browsers.
-This one is for Chrome. For Firefox for example you dont have to send the Authorization header.
+The may be a little bit different between different browsers.
+This one is for Chrome. For Firefox, for example you dont have to send the Authorization header.
 Of course you can add meta-information to your request.
 With this the communication of the server and ServiceWorker is finished.
 
-To react on an incoming request you have to define an EventListener in your firebase-messaging-sw.js.
+To react on an incoming request you have to define an EventListener in your `firebase-messaging-sw.js`.
 This works just like normal EventListeners.
 The following example listen to the push request and displays a notification:
 
@@ -137,18 +137,19 @@ The following example listen to the push request and displays a notification:
         self.registration.showNotification('Push Notification', {})
     });
 
-The second parameter of the showNotification is an option array with what you can change the notification behavior (just like mobile vibration etc. all options can be testet [here](https://tests.peter.sh/notification-generator/)).
+The second parameter of the `showNotification` is an option array with it you can change the notification behavior (just like mobile vibration etc. all options can be testet [here](https://tests.peter.sh/notification-generator/)).
 To update the registered ServiceWorker just refresh your Browser.
 
-With that you should always see a visual push notification as long as you have a browser with an active service worker running.
+With this you should always see a visual push notification as long as you have a browser with an active service worker running.
 
 
 #### Common Problems
 
 ###### Insufficient Permission
-Mostly if you cant get an token for your endpoint this is cause by insufficient notification permission.
-You can prove your permission with Notification.permission (should be "granted").
-You can reset your permission with rightclick on the prefix in your browsers URL bar or in your browser settings.
+
+*  Mostly if you can't get a token for your endpoint this is cause by insufficient notification permission.
+   * You can prove your permission with Notification.permission (should be "granted").
+   * You can reset your permission with rightclick on the prefix in your browsers URL bar or in your browser settings.
 
 ###### Wrong push request authentication
 If you (for Example CURL) request responding with something like "bad request" or "wrong authentication" in the most cases you endpoint-token changed.
