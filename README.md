@@ -22,12 +22,12 @@ Works for Chrome, EDGE and Firefox. All Examples are for Chrome.
 
 To create a firebase account you need a google account first. 
 With that you can log in under [console.firebase.google.com](https://console.firebase.google.com).
-Now enter an existing firebase project or create a new firebase project.
+Now enter an existing firebase project or create a new project.
 After entering the project click on the gear right next to "Project Overview" on the top of left sidebar and enter "Project settings".
-Now you should the see some general setting for your project an below that list of all your apps.
-Choose a web out of the list off your apps (those are prefixed with </>) or create a new app by clicking the "Add app" button.
-After selecting an app you see al sorts of information on the right.
-Copy the CDN html-code on right under "Firebase SDK snippet". It should look like this:
+You should now see some general setting for your project and below a list of all your apps.
+Choose "web" out of the list of your apps (those are prefixed with </>) or create a new app by clicking the "Add app" button.
+After selecting an app you see multiple information on the right.
+Copy the CDN html-code directly under "Firebase SDK snippet". It should look like this:
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
