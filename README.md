@@ -12,8 +12,7 @@ The web-app server communication expects a https connection
 All web-certificates must be valid
  * otherwise the browser has to be started explicitly unsecured like
     
-  
-    google-chrome --user-data-dir=/tmp/foo --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=<your-host>
+    `google-chrome --user-data-dir=/tmp/foo --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=<your-host>`
 
 Browser-notification arent global disabled
 
