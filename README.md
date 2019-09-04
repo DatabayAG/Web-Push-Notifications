@@ -68,7 +68,7 @@ You should add it right after the `firebase-app.js` in your SDK snippet
 
      <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-messaging.js"></script>
      
-Following you can create an messaging object below the initializeApp in the SDK snippet.
+Now you should be able to create a messaging object below the `initializeApp` in the SDK snippet.
 
     const messaging = firebase.messaging();
 
