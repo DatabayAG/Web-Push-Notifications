@@ -152,8 +152,8 @@ With this you should always see a visual push notification as long as you have a
    * You can reset your permission with rightclick on the prefix in your browsers URL bar or in your browser settings.
 
 ###### Wrong push request authentication
-If you (for Example CURL) request responding with something like "bad request" or "wrong authentication" in the most cases you endpoint-token changed.
-This can happen if you dont updated you service worker but replace it with a new one.
+If your (for Example CURL) request is responded with something like "bad request" or "wrong authentication" in most cases your endpoint-token has changed.
+This can happen if you updated your service worker but didn't replace it with a new one.
 In this case just update your endpoint-token in your request.
 
 ###### Missing Compatibility
@@ -164,10 +164,10 @@ Push notifications dont work in Safari or IE.
 
 There are some possible variation in the implementation progress
 
-- There are ways to implement notifications without the firebase API or even without firebase.
-An example using the the web-push node.js library can be found [here](https://developers.google.com/web/ilt/pwa/introduction-to-push-notifications#vapid).
-- Its possible to send push notification without VAPID, but not recommended.
-- The Sending progress can be done with the firebase API, too. But i personally would recommend it to keep layer of incoming request abtract.
+* There are ways to implement notifications without the firebase API or even without firebase.
+   * An example using the the web-push node.js library can be found [here](https://developers.google.com/web/ilt/pwa/introduction-to-push-notifications#vapid).
+* Its possible to send push notification without VAPID, but not recommended.
+* The Sending progress can be done with the firebase API, too. But i personally would recommend it to keep layer of incoming request abtract.
 
 
 
