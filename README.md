@@ -1,16 +1,19 @@
 ## Implementation of Asynchronous Push Notifications in Progressive Web Applications
 
-Using [Push API](https://www.w3.org/TR/push-api/)
-and [Firebase](https://firebase.google.com/docs).
+.. using [Push API](https://www.w3.org/TR/push-api/) and
+[Firebase](https://firebase.google.com/docs).
 
 The `Push API` is currently [supported](https://caniuse.com/#feat=push-api)
-by Chrome, Edge and Firefox. Chrome v. 76 was used for the examples and prototypes described in this document.
+by Chrome, Edge and Firefox. Chrome v. 76 was used for the examples and
+prototypes described in this document.
 
 ### Requirements
 
-1. The web application server servers it's documents via a HTTP connection.
+1. The web application's HTTP server serves it's documents via a
+secure HTTPS connection.
 2. All certificates used for transport encryption (HTTPS/SSL) must be valid.
-    * Otherwise (e.g. for development purposes) the browser has to be started explicitly unsecured like:
+    * Otherwise (e.g. for development purposes) the browser has to be started
+explicitly unsecured like:
 
 ```bash
     google-chrome --user-data-dir=/tmp/foo --ignore-certificate-errors --unsafely-treat-insecure-origin-as-secure=<your-host>
@@ -22,23 +25,26 @@ by Chrome, Edge and Firefox. Chrome v. 76 was used for the examples and prototyp
 
 #### Create a Firebase Project
 
-To create a firebase account, you need a google account first. 
+To create a `Firebase` account, you need a google account first. 
 With that you can log in on [console.firebase.google.com](https://console.firebase.google.com).
-Now enter an existing firebase project by selecting the respective
+Now enter an existing `Firebase` project by selecting the respective
 project on your dashboard or create a new project via
 the `Create a project` button.
 After entering the project, click on the gear symbol right next to `Project Overview`
 at the top of the left sidebar and click on the `Project settings` link.
-You should now see some general settings for your project and a `Your apps` section
-at the bottom of the page.
+You should now see some general settings for your project
+and a `Your apps` section at the bottom of the page.
 
 * If you have not created an app at all: Click on the a web application
-symbol `</>` in the `Your apps` list at the bottom of the page to create a new web application.
-* If you have already created at least one app: Click on the `Add app` button to create an further app,
-or choose the respective app from the `Web apps` list.
+symbol `</>` in the `Your apps` list at the bottom of the page to create
+a new web application.
+* If you have already created at least one app: Click on the `Add app`
+button to create an further app, or choose the respective app
+from the `Web apps` list.
  
 After selecting an app you see multiple information on the right.
 Copy the CDN HTML code, which is shown directly below `Firebase SDK snippet`.
+
 It should look similar to this:
 
 ```html
@@ -64,7 +70,7 @@ It should look similar to this:
     </script>
 ```
     
-If you do not want to use CDN you can also download the JavaScript file.
+If you do not want to use a CDN you can also download the JavaScript file.
 
 #### Integration
 
@@ -79,7 +85,7 @@ file from the ([`Firebase SDK`] (you can find useful links for integration [here
 to your application's root directory.
 In ILIAS the integration or implementation of a `Service Worker` will have
 strong correlations to the **Concept ILIAS Offline**, because each web application
-can only register one `Service Worker`.
+can only register **one** `Service Worker`.
 If your application already implements a `Service Worker` it has to be open
 for extended push notification JavaScript code by offering respective slots
 for other components. 
