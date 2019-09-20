@@ -105,13 +105,13 @@ Now you should be able to create a messaging object below the `initializeApp` in
     const messaging = firebase.messaging();
 ```
 
-You have to connect the service worker to your firebase project server.
+You have to connect the service worker to your `Firebase` project server.
 
 In order to do that you need your public [`VAPID`](https://www.rfc-editor.org/info/rfc8292) key.
 - VAPID is a secure protocol communication between the server and the service worker.
 - It is published by Google and a proposed standard for [IETF](https://www.rfc-editor.org/info/rfc8292).
 
-To get the key, go to your firebase project setting and enter the tab `Cloud Messaging`.
+To get the key, go to your `Firebase` project setting and enter the tab `Cloud Messaging`.
 You have to scroll down to `Web configuration`.
 In the box on the right (below `Web Push certificates`) you should see a key called `Key pair`.
 If not, create one.
@@ -144,7 +144,7 @@ For this you have to call the promise-function `messaging.getToken()` after your
 ```
 
 The response of the promise passed as argument is the actual token.
-When you combine the token with the default firebase cloud messaging
+When you combine the token with the default `Firebase` cloud messaging
 send url (https://fcm.googleapis.com/fcm/send/) you get your personal
 endpoint for your push notifications.
 
@@ -157,8 +157,8 @@ endpoint for your push notifications.
 ```
 
 You can now send notification requests to that endpoint.
-To authenticate the request you need one of your firebase server keys.
-You can find those in your firebase project settings in the tab `Cloud Messaging`.
+To authenticate the request you need one of your `Firebase` server keys.
+You can find those in your `Firebase` project settings in the tab `Cloud Messaging`.
 You can use the `Legacy Server key`, but its recommended to add/use a new `Server key`.
 It is possible to create multiple `Server keys` for different purposes.
 
