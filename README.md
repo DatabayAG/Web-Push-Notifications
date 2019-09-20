@@ -1,7 +1,7 @@
 ## Implementation of Asynchronous Push Notifications in Progressive Web Applications
 
 Using [Push API](https://www.w3.org/TR/push-api/)
-and [Firebase](https://firebase.google.com/docs)
+and [Firebase](https://firebase.google.com/docs).
 
 The `Push API` is currently [supported](https://caniuse.com/#feat=push-api)
 by Chrome, Edge and Firefox. Chrome v. 76 was used for the examples and prototypes described in this document.
