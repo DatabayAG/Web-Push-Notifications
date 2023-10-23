@@ -4,7 +4,7 @@
 [Firebase](https://firebase.google.com/docs).
 
 The `Push API` is currently [supported](https://caniuse.com/#feat=push-api)
-by Chrome, Edge and Firefox. Chrome v. 76 was used for the examples and
+by Chrome, Edge, Firefox, opera and partially Safari. Chrome v. 76 was used for the examples and
 prototypes described in this document.
 
 ### Requirements
@@ -29,7 +29,7 @@ To create a `Firebase` account, you need a google account first.
 With that you can log in on [console.firebase.google.com](https://console.firebase.google.com).
 Now enter an existing `Firebase` project by selecting the respective
 project on your dashboard or create a new project via
-the `Create a project` button.
+the `Add project` button.
 After entering the project, click on the gear symbol right next to `Project Overview`
 at the top of the left sidebar and click on the `Project settings` link.
 You should now see some general settings for your project
@@ -49,7 +49,7 @@ It should look similar to this:
 
 ```html
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
     
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#config-web-app -->
@@ -96,7 +96,7 @@ the `firebase-messaging.js` to be included in your HTML document.
 You should include it right after the `firebase-app.js` in your SDK snippet:
 
 ```html
-    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-messaging.js"></script>
 ```
 
 Now you should be able to create a messaging object below the `initializeApp` in the SDK snippet.
